@@ -1,0 +1,286 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: clip;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: aqua;
+  }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginInfo{
+  margin: auto;
+  margin-top: 200px;
+  display: block;
+  text-align: center;
+}
+
+.loginInfo button{
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid #5f7beb;
+  background-color: aqua;
+  color: #364ca6;
+  cursor: pointer;
+}
+
+.title_nav{
+  background-color: #3f5fe4;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-home-img{
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-17px);
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.title_nav-img{
+  position: absolute;
+    top: 50%;
+    transform: translateY(-14px);
+    left: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.title_nav h2{
+  color: aqua;
+  margin: 0;
+  line-height: 70px;
+}
+
+.navbar-list{
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+header{
+  margin: 0 auto;
+}
+
+.nav-item{
+  padding: 0 20px;
+}
+
+li{
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-link a{
+  color: rgb(91, 46, 133);
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.active a,
+  .nav-link a:hover{
+ color: rgb(167, 104, 226);
+}
+
+
+
+.rooms_title{
+  text-align: center;
+}
+
+.room_item{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid blue;
+}
+
+.room_list{
+  padding: 20px;
+  margin-top: 70px;
+}
+
+.room_item{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+}
+
+.room_item h3{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.room_image{
+    padding-right: 20px;
+}
+
+.room_image div{
+  height: 100%;
+}
+
+.room_image img{
+  object-fit: cover;
+}
+
+.room_rating_number{
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.room_rating{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.room_rating_count{
+  margin-right: 5px;
+}
+
+.room_rating_rat_wr{
+  margin-right: 10px;
+  display: flex;
+}
+
+.room_type{
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.room_price{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.room_max{
+  font-size: 0.8rem;
+}
+
+.bottom_info{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: baseline;
+}
+
+.form_wrapper{
+  margin-top: 100px;
+  padding: 30px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #212d5e;
+  margin-bottom: 20px;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 500px;
+  color: #212d5e;
+  padding: 30px;
+  border: 1px solid #364ca6;
+  border-radius: 10px;
+}
+
+.form-group label{
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  margin-bottom: 15px  ;
+}
+
+.form-group input,
+textarea{
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form button{
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  padding: 15px 50px;
+  background-color: #364ca6;
+  color: aqua;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form button:hover{
+  background-color: #96abe5;
+  color: #364ca6;
+}
+
+.imageSelect{
+  font-size: .8rem;
+}
+
+.imageSelect label{
+  cursor: pointer;
+}
+
+.imageSelect label:hover{
+  color: #96abe5;
+}
+
+.imageSelect .img-wrap{
+  margin-right: 10px;
+}
+
+.imageSelect button{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 2px solid #5f7beb;
+    background-color: aqua;
+    color: #364ca6;
+    cursor: pointer;
+}
+
+.imageSelect button:hover{
+  color: #96abe5;
+  border-color: #96abe5;
+  background-color: aqua;
+}
+
+.uploaded_img{
+  border: 1px solid #5f7beb !important;
+}
