@@ -4,11 +4,13 @@ import { ImageSelect } from "../components/add-room-page/ImageSelect";
 import { randomIntFromSpan } from "utils/randomFromSpan";
 import { useSession } from "next-auth/react";
 import { LoginInfo } from "@components/commons/loginInfo";
+import { useRouter } from "next/router";
 
 
 export default function AddRoom(){
    
    const session = useSession();
+   const router = useRouter();
    const [uploadedImages, setUploadedImages] = useState();
 
    console.log({session});
@@ -34,7 +36,9 @@ export default function AddRoom(){
       }).catch(err => console.log("err when posting room", err));
   
       const resJson = await res.json(); 
-      if(resJson.insertedId) console.log("added successfully");
+      if(resJson.insertedId){
+         router.push("/rooms");
+      }
     };
 
    return(

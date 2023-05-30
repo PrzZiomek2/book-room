@@ -148,6 +148,8 @@ registerRoute(
   'GET'
 );
 
+
+
 // following lines gives you control of the offline fallback strategies
 // https://developers.google.com/web/tools/workbox/guides/advanced-recipes#comprehensive_fallbacks
 
@@ -183,6 +185,23 @@ setCatchHandler(({ event }) => {
     // break
     default:
       // If we don't have a fallback, just return an error response.
-      return Response.error();
+      return  
   }
 });
+
+registerRoute(
+  ({ request }) => request.destination === "document",
+  new CacheFirst({
+    cacheName: "pages",
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [200],
+      }),
+      new ExpirationPlugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, 
+      }),
+    ],
+  })
+);
+

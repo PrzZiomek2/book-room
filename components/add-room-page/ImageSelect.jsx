@@ -4,11 +4,10 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 
-export const ImageSelect = ({setUploadedImages}) =>{
+export const ImageSelect = ({setUploadedImages, currentImage}) =>{
 
-   const router = useRouter();
    const [uploading, setUploading] = useState(false);
-   const [selectedImg, setSelectedImg] = useState("");
+   const [selectedImg, setSelectedImg] = useState(currentImage);
    const [selectedFile, setSelectedFile] = useState();
    const [isUploaded, setIsUploaded] = useState(false);
 

@@ -120,20 +120,28 @@ li{
 }
 
 .room_item{
+  width: 100%;
+  max-width: 700px;
+  display: flex;
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid blue;
+  justify-content: space-between;
+}
+
+.room-actions{
+  display: flex;
+  flex-direction: column;
+}
+
+.room-actions a{
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .room_list{
   padding: 20px;
   margin-top: 70px;
-}
-
-.room_item{
-    width: 100%;
-    max-width: 700px;
-    display: flex;
 }
 
 .room_item h3{
@@ -283,4 +291,41 @@ textarea{
 
 .uploaded_img{
   border: 1px solid #5f7beb !important;
+}
+
+
+
+.page{
+  background-color: aqua;
+}    
+
+.card{
+  border: 1px solid #364ca6;
+  border-radius: 10px;
+  color: #212d5e;
+}
+
+.signin button{
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  padding: 15px 50px;
+  background-color: #364ca6;
+  color: aqua;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.signin form > div{
+  margin-bottom: 25px;
+}
+
+.signin label{
+  margin-bottom: 10px;
+}
+
+.loader{
+  display: flex;
+    justify-content: center;
 }

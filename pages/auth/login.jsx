@@ -1,8 +1,19 @@
 import { Nav } from "@components/commons/Nav";
-import React, { useState } from "react";
-import {signIn} from 'next-auth/react'
+import React, { useEffect, useState } from "react";
+import {signIn, useSession} from 'next-auth/react'
+import { useRouter } from "next/router";
+
 
 export default function Login(){
+
+   const router = useRouter();
+   const session = useSession();
+
+   useEffect(() => {
+      if(session.status === "authenticated"){
+         router.push("/");
+      }
+   }, [session, router])
 
    const handleAddRoomSubmit = async (e) => {
       e.preventDefault();
@@ -11,8 +22,8 @@ export default function Login(){
       await signIn({
          email: inputs.email.value, 
          password: inputs.password.value,
-         callbackUrl: `${window.location.origin}/`
-      })
+      });
+
     };
 
    return(
