@@ -46,8 +46,8 @@ export default function EditRoom({room}){
         }),
       }).catch(err => console.log("err when updating room", err));
   
-      const resJson = await res.json(); 
-      if(resJson.modifiedCount){
+      const resJson = await res.json(); console.log({resJson});
+      if(resJson.data.modifiedCount){
          router.push("/rooms");
       }
     };

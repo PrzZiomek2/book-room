@@ -6,10 +6,12 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Loader } from "@components/commons/Loader";
+import { useRouter } from "next/router";
 
 
 export default function Rooms(){
 
+   const router = useRouter()
    const [roomsList, setRoomsList] = useState([]);
 
    const getRoomsList = async () => {
@@ -53,7 +55,14 @@ export default function Rooms(){
                return(
                <div key={room._id} className="room_item">
                      <div className="room_image">
-                        <Image loader={() => imgSrc} src={imgSrc} alt="zdjęcie pokoju" width={"100%"} height={"100%"}/>
+                        <Image 
+                           loader={() => imgSrc} 
+                           src={imgSrc} 
+                           alt="zdjęcie pokoju" 
+                           width={"100%"} 
+                           height={"100%"}
+                           className="uploaded_img"
+                        />
                      </div>
                      <div className="room_info">
                         <h3>{room.name}</h3>
@@ -85,5 +94,3 @@ export default function Rooms(){
    )
 }
 
-
- 

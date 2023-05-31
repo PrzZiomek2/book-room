@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       const deleted = await db.collection("rooms").deleteOne({"_id": new ObjectId(req.query.roomId)}); 
       res.json({ status: 200, data: deleted });
       break;
-    case "GET": console.log("req.query.roomId", req.query.roomId);
+    case "GET": 
       const room = await db.collection("rooms").findOne({"_id": new ObjectId(req.query.roomId)}); 
       res.json({ status: 200, data: room });
       break;

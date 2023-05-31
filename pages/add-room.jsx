@@ -13,8 +13,6 @@ export default function AddRoom(){
    const router = useRouter();
    const [uploadedImages, setUploadedImages] = useState();
 
-   console.log({session});
-
    const handleAddRoomSubmit = async (e) => {
       e.preventDefault();
       const inputs = e.target;
