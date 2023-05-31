@@ -1,3 +1,5 @@
+
+const withImages = require('next-images');
 const runtimeCaching = require("next-pwa/cache");
 
 const withPWA = require("next-pwa")({

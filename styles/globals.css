@@ -73,6 +73,7 @@ a {
     left: 30px;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .title_nav h2{
@@ -124,7 +125,7 @@ li{
   max-width: 700px;
   display: flex;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-bottom: 1px solid blue;
   justify-content: space-between;
 }
@@ -140,8 +141,15 @@ li{
 }
 
 .room_list{
+  margin: auto;
+  max-width: 600px;
   padding: 20px;
-  margin-top: 70px;
+  margin-top: 90px;
+}
+
+.room_info{
+  flex-grow: 1;
+  padding: 0 30px;
 }
 
 .room_item h3{
@@ -155,6 +163,7 @@ li{
 
 .room_image div{
   height: 100%;
+  width: 200px;
 }
 
 .room_image img{
@@ -163,7 +172,6 @@ li{
 
 .room_rating_number{
   font-weight: bold;
-  margin-right: 5px;
 }
 
 .room_rating{

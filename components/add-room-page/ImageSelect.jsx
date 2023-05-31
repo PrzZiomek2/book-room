@@ -71,7 +71,7 @@ export const ImageSelect = ({setUploadedImages, currentImage}) =>{
       </div>
       <div className="button">
         <button 
-          disabled={uploading}
+          disabled={uploading || !selectedImg}
           onClick={handleUpload}
           style={{opacity: uploading ? ".5" : "1"}}
         >
